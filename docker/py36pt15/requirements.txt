@@ -27,11 +27,8 @@ imageio-ffmpeg
 MulticoreTSNE
 attrs
 black
-efficintnet-pytorch
 gdown
-got10k
-Pillow
-PyYAML
+pillow
 scikit-image
 scikit-learn
 yacs
