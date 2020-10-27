@@ -116,7 +116,7 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     /bin/bash anaconda.sh -b -p /opt/conda && \
     rm anaconda.sh
 
-ENV PATH="/opt/conda/bin:/tmp/bin:${PATH}"
+ENV PATH="/opt/conda/bin:${PATH}"
 ENV LD_LIBRARY_PATH="/opt/conda/lib:${LD_LIBRARY_PATH}"
 
 RUN conda install -y python=3.6
@@ -174,6 +174,7 @@ RUN touch /etc/skel/.bashrc
 #RUN apt-get install -y openssh-server
 
 RUN echo "alias ll='ls -alF'" >> /etc/skel/.bashrc
+RUN echo "export PATH=/tmp/bin/:/tmp/noel/:$PATH" >> /etc/skel/.bashrc
 
 
 # higher version of mpi is requried by horovod
