@@ -116,7 +116,7 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     /bin/bash anaconda.sh -b -p /opt/conda && \
     rm anaconda.sh
 
-ENV PATH="/opt/conda/bin:${PATH}"
+ENV PATH="/opt/conda/bin:/tmp/bin:${PATH}"
 ENV LD_LIBRARY_PATH="/opt/conda/lib:${LD_LIBRARY_PATH}"
 
 RUN conda install -y python=3.6
