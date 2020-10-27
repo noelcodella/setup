@@ -174,7 +174,6 @@ RUN touch /etc/skel/.bashrc
 #RUN apt-get install -y openssh-server
 
 RUN echo "alias ll='ls -alF'" >> /etc/skel/.bashrc
-RUN echo "export PATH=/tmp/bin/:/tmp/noel/:$PATH" >> /etc/skel/.bashrc
 
 
 # higher version of mpi is requried by horovod
